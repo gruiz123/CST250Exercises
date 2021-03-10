@@ -1,14 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package edu.ru.exercise02;
 
-/**
- *
- * @author Jerry
- */
 public class MainClass {
-    
+
+    public static void main(String[] args){ 
+        Person customer01 = new Person("Jack");
+        customer01.getShoppingList().addItemToList("Milk");
+        customer01.getShoppingList().addItemToList("Bread");
+        customer01.display(); 
+    }
 }

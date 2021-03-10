@@ -1,14 +1,40 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package edu.ru.exercise02;
 
-/**
- *
- * @author Jerry
- */
-public class ShoppingList {
+import java.util.ArrayList;
+
+public class ShoppingList { 
     
+    private ArrayList<ShoppingItem> items;
+     
+    public ShoppingList(ArrayList<ShoppingItem> items) { 
+        this.items = items;
+    } 
+    
+    public ShoppingList(){
+        this.items = new Arraylist<>();
+    } 
+    
+    public ArrayList<ShoppingItem> getItems() {
+        return items;
+    } 
+
+    public void setItems(ArrayList<ShoppingItem> items) {
+        this.items = items;
+    } 
+    
+    public void addItemToList(String itemName){
+        ShoppingItem newItem = new ShoppingItem(itemName);
+        this.items.add(newItem);
+    }
+    
+    public void display(){
+        System.out.println("------------------------");
+        System.out.println("Items: ");
+        System.out.println("------------------------");
+        for(ShoppingItem item : this.items){
+            item.display();
+        }
+        System.out.println("------------------------");
+    }
 }
